@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-aireceipegenerator-dev-85c5b-authRole",
+      "UnauthRoleArn": "arn:aws:iam::086412245732:role/amplify-aireceipegenerator-dev-85c5b-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::086412245732:role/amplify-aireceipegenerator-dev-85c5b-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-aireceipegenerator-dev-85c5b-deployment",
+      "UnauthRoleName": "amplify-aireceipegenerator-dev-85c5b-unauthRole",
+      "StackName": "amplify-aireceipegenerator-dev-85c5b",
+      "StackId": "arn:aws:cloudformation:us-east-1:086412245732:stack/amplify-aireceipegenerator-dev-85c5b/d6e4d6c0-1af0-11f0-b263-0affe11aba53",
+      "AmplifyAppId": "d3et4mpsbyq9wb"
+    }
+  }
+}
