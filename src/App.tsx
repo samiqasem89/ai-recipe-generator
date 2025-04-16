@@ -14,12 +14,22 @@ const amplifyConfig = {
   Auth: {
     Cognito: {
       userPoolId: "us-east-1_6j73NatNZ",
-      userPoolClientId: "1kel71fskkltc7udt8a3ebvgo",
-      region: "us-east-1" as "us-east-1", // Explicitly type as literal
+      userPoolClientId: "XXXXXXXXXXXXXXXXXXXXXXXXX",
+      region: "us-east-1" as "us-east-1",
+    },
+  },
+  API: {
+    GraphQL: {
+      endpoint:
+        "https://uobtakzhkbbtxmuqnfved3f2ue.appsync-api.us-east-1.amazonaws.com/graphql", // Get this from AWS AppSync console
+      region: "us-east-1" as "us-east-1",
+      defaultAuthMode: "userPool",
     },
   },
 };
+
 Amplify.configure(amplifyConfig);
+
 const amplifyClient = generateClient<Schema>({
   authMode: "userPool",
 });
