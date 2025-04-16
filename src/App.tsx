@@ -4,31 +4,11 @@ import "./App.css";
 import { Amplify } from "aws-amplify";
 import { Schema } from "../amplify/data/resource";
 import { generateClient } from "aws-amplify/data";
-//import outputs from "../amplify_outputs.json";
+import outputs from "../amplify_outputs.json";
 import { withAuthenticator } from "@aws-amplify/ui-react";
 import "@aws-amplify/ui-react/styles.css";
 
-//Amplify.configure(outputs);
-
-const amplifyConfig = {
-  Auth: {
-    Cognito: {
-      userPoolId: "us-east-1_6j73NatNZ",
-      userPoolClientId: "XXXXXXXXXXXXXXXXXXXXXXXXX",
-      region: "us-east-1" as "us-east-1",
-    },
-  },
-  API: {
-    GraphQL: {
-      endpoint:
-        "https://uobtakzhkbbtxmuqnfved3f2ue.appsync-api.us-east-1.amazonaws.com/graphql", // Get this from AWS AppSync console
-      region: "us-east-1" as "us-east-1",
-      defaultAuthMode: "userPool",
-    },
-  },
-};
-
-Amplify.configure(amplifyConfig);
+Amplify.configure(outputs);
 
 const amplifyClient = generateClient<Schema>({
   authMode: "userPool",
