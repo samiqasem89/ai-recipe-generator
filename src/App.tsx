@@ -4,12 +4,22 @@ import "./App.css";
 import { Amplify } from "aws-amplify";
 import { Schema } from "../amplify/data/resource";
 import { generateClient } from "aws-amplify/data";
-import outputs from "../amplify_outputs.json";
+//import outputs from "../amplify_outputs.json";
 import { withAuthenticator } from "@aws-amplify/ui-react";
 import "@aws-amplify/ui-react/styles.css";
-import awsconfig from "./aws-exports";
-Amplify.configure(outputs);
 
+//Amplify.configure(outputs);
+
+const amplifyConfig = {
+  Auth: {
+    Cognito: {
+      userPoolId: "us-east-1_6j73NatNZ",
+      userPoolClientId: "1kel71fskkltc7udt8a3ebvgo",
+      region: "us-east-1" as "us-east-1", // Explicitly type as literal
+    },
+  },
+};
+Amplify.configure(amplifyConfig);
 const amplifyClient = generateClient<Schema>({
   authMode: "userPool",
 });
